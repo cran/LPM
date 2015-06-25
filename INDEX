@@ -1,0 +1,8 @@
+LPM-package             Linear Parametric Models Applied To
+                        Hydrological Series
+ar.egls                 Subset Autoregressive Model
+lpm                     Linear Parametric Model
+mlpm                    Multivariate Linear Parametric Model
+rain.adapt              Rainfall Adaptor
+series.rainfall         Daily Rainfall Series
+series.runoff           Daily Runoff Series
