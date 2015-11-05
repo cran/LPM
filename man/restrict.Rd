@@ -44,6 +44,13 @@
 \alias{Levaneg}
 \alias{aggiustam}
 \alias{aggiusta}
+\alias{Hreg}
+\alias{eventi}
+\alias{eventi2}
+\alias{f1}
+\alias{f2}
+\alias{f3}
+\alias{vb}
 \title{Support function}
 
 \description{Support function}
