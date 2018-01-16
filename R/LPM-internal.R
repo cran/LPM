@@ -856,9 +856,167 @@ function (x)
     conta1 <- conta/length(x)
     conta1
 }
-
-
-
-
-
-
+#' @keywords internal
+vb <- 
+function(s)
+{out=c(1)
+for (j in 1:s)
+  out = c(out,1)  
+out
+}
+#'@keywords internal
+Hreg <- 
+function (ev, a, m, b,fre) 
+{
+  out = matrix(0, nrow(ev), ncol(ev))
+  for (i in 1:ncol(ev)) out[, i] = a * (fre * i)/(b + fre * i) ^m
+  out
+}
+#'@keywords internal
+f3 <- 
+function (e, x3,fre) 
+{
+  e = as.matrix(e)
+  r = nrow(e)
+  a = e[1:(r - 1)]
+  b = 0
+  m = e[r]
+  
+  x2 <- Hreg(x3, a, m, b, fre)
+  out = f1(x3, x2)
+  out
+}
+#'@keywords internal
+f2 <- 
+function (e, x3,fre) 
+{
+  e <- as.matrix(e)
+  r <- nrow(e)
+  a <- e[1:(r - 2)]
+  m <- e[r-1]
+  b <- e[r]
+  
+  x2 <- Hreg(x3, a, m, b,fre)
+  out <- f1(x3, x2)
+  out
+}
+#'@keywords internal
+f1 <- 
+function (x1, x2) 
+{
+  x1 <- as.matrix(x1)
+  x2 <- as.matrix(x2)
+  v <- 0
+  r <- nrow(x1)
+  c <- ncol(x1)
+  {
+    for (j in 1:c) {
+      for (i in 1:r) v <- v + (x1[i, j] - x2[i, j])^2
+    }
+  }
+  v
+}
+#'@keywords internal
+eventi2 <- 
+function (x) 
+{
+  cont = 0
+  x=as.matrix(x)
+  n = nrow(x)
+  out2 = matrix(0, n, ncol(x))
+  for (i in 1:n) {
+    if (x[i, 1] > 0) {
+      cont = cont + 1
+      out2[cont, ] = x[i, ]
+    }
+  }
+  out3 <- out2[1:cont, ]
+  out4 <- out3
+  for (j in 1:ncol(out3))
+    out4[,j]=sort(out3[,j],decreasing = T )
+  out4
+}
+#'@keywords internal
+eventi <- 
+function (x, g, s) 
+{
+  n <- nrow(as.matrix(x))
+  out <- matrix(0, n, g)
+  k = 1
+  while (k < (n - g)) {
+    if (x[k] > s) {
+      out[k, 1] <- x[k]
+      for (j in 1:(g - 1)) out[k, j + 1] <- out[k, j] + 
+          x[k + j]
+      k = k + g
+    }
+    else {
+      out[k, 1] <- 0
+      k = k + 1
+    }
+  }
+  out
+}
+#'@keywords internal
+Ireg1 <- 
+  function (ev, a, m, b, t) 
+  {
+    out = matrix(0, nrow(ev), ncol(ev))
+    for (i in 1:length(t)) out[, i] = a /(b + t[i])^m
+    out
+  }
+#'@keywords internal
+Hreg1 <- 
+  function (ev, a, m, b, t) 
+  {
+    out = matrix(0, nrow(ev), ncol(ev))
+    for (i in 1:length(t)) out[, i] = a * (t[i])/(b + t[i])^m
+    out
+  }
+#'@keywords internal
+f4 <-
+  function (e, x3, t) 
+  {
+    e = as.matrix(e)
+    r = nrow(e)
+    a = e[1:(r - 1)]
+    b = 0
+    m = e[r]
+    x2 <- Hreg1(x3, a, m, b, t)
+    out = f1(x3, x2)
+    out
+  }
+#'@keywords internal
+f5 <- 
+  function (e, x3, t) 
+  {
+    e <- as.matrix(e)
+    r <- nrow(e)
+    a <- e[1:(r - 2)]
+    m <- e[r - 1]
+    b <- e[r]
+    x2 <- Hreg1(x3, a, m, b, t)
+    out <- f1(x3, x2)
+    out
+  }
+#'@keywords internal
+Ireg <- 
+  function (ev, a, m, b, fre) 
+  {
+    out = matrix(0, nrow(ev), ncol(ev))
+    for (i in 1:ncol(ev)) out[, i] = a /(b + fre * 
+                                           i)^m
+    out
+  }
+#'@keywords internal
+annualmax <- 
+  function (x) 
+{for (k in 1:ncol(x)) x[,k]=sort(x[,k],decreasing=T)
+for (j in 1:nrow(x)) 
+{for (i in 1:(ncol(x)-1)) 
+{if (x[j,i]>x[j,i+1]) 
+{cat("warning","\n") 
+  x[j,i+1]=x[j,i]}
+}
+}
+x}

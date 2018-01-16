@@ -45,12 +45,18 @@
 \alias{aggiustam}
 \alias{aggiusta}
 \alias{Hreg}
+\alias{Hreg1}
+\alias{Ireg}
+\alias{Ireg1}
 \alias{eventi}
 \alias{eventi2}
 \alias{f1}
 \alias{f2}
 \alias{f3}
+\alias{f4}
+\alias{f5}
 \alias{vb}
+\alias{annualmax}
 \title{Support function}
 
 \description{Support function}
