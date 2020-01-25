@@ -1,7 +1,7 @@
-df7a99c0306a6660d15f66c03649205f *DESCRIPTION
-dcbff5f9ec1f98cc39924137e6b335db *NAMESPACE
-49826e1f3df93b787d8cd4f0fd8388cf *R/IDFcurve.R
-42ba0d5a64f8d682cc169a72e093141f *R/IDFcurve2.R
+412402b764c2af30ff5bb21bd5d205c5 *DESCRIPTION
+b616ce0439c5f1ad18c0fed5c7cd0b2b *NAMESPACE
+6ce9c37412c3afecfab9d8e60f86ae09 *R/IDFcurve.R
+8c9933530b5e19ab4278c673f533c196 *R/IDFcurve2.R
 5199663b4f7bf79216ab0180d6218d25 *R/LPM-internal.R
 0319ef0562a3cabc6e1a9c4bae7d25c4 *R/ar.egls.R
 ee447b2d625009a2adf91845c5752568 *R/lpm.R
@@ -11,8 +11,8 @@ b9069600522c3ada8da7a4806c02c320 *data/hourly.rainfall.series.rda
 f799634d9934147cdf44175b47704d42 *data/milano.rda
 876cf55456cef52f3390ba637f85e489 *data/series.rainfall.rda
 cf106930ef3e0437936a829f728e5ab1 *data/series.runoff.rda
-4e8c45f80558ebece91d0a69a824741b *man/IDFcurve.Rd
-a0dc5123d9e204c01078b73a054d0d7d *man/IDFcurve2.Rd
+23a7988f9270836677e7aab3933f2379 *man/IDFcurve.Rd
+bf7fcb5cd5b459e3023070cd1e45e8f9 *man/IDFcurve2.Rd
 46f236de63a2d5d2233dfcd00e2ba436 *man/ar.egls.Rd
 adb83b763f937fb154851934bb0740fd *man/hourly.rainfall.series.Rd
 8fabb48ed36d1a4c7acf2603ca87b242 *man/lpm.Rd

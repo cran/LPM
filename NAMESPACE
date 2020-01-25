@@ -1,2 +1,2 @@
 exportPattern("^[[:alpha:]]+")
-import(stats,graphics,grDevices,QRM,fracdiff,MASS)
+import(stats,graphics,grDevices,fracdiff,powdist,MASS)

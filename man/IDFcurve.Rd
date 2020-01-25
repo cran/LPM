@@ -2,14 +2,14 @@
 \alias{IDFcurve}
 \title{ Intensity duration frequency curve }
 \description{
-Estimate IDF curve fitting a, m ,n parameters }
+Estimate IDF curve fitting a [mm/h], m ,n, b[h] parameters }
 \usage{
-IDFcurve(rain, g, s, tc, stvalue1 = 1, stvalue2 = fre, fre, Tr = 200, 
+IDFcurve(rain, g, s, tc, stvalue1 = 1, stvalue2 = fre, fre, Tr = 200,
                       MP=F, Trplot=F)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{rain}{ Univariate rainfall series non cumulative }
+  \item{rain}{ Observed Univariate rainfall series non cumulative }
   \item{g}{ Maximum bound for cumulative series. For daily series g = 7 is recommended, for hourly series g=24 is racommended }
   \item{s}{ Threshold for defining "event". If  "10", only h > = 10 mm values are considered}
    \item{tc}{ Time of concentration of Basin [h]}
@@ -22,8 +22,8 @@ IDFcurve(rain, g, s, tc, stvalue1 = 1, stvalue2 = fre, fre, Tr = 200,
 \details{
   Estimate parameters of Intensity Duration Frequency curves }
 \value{
- \item{par}{List of estimated parameters: a(tr), m, b, h(t), i(t), Offset of least squares optimizer}
-  \item{Curve }{IDF curve Scattered point matrix  }
+ \item{par}{List of estimated parameters: a(tr), m, b, h(t) [mm], i(t) [mm/h], Offset of least squares optimizer}
+  \item{Curve }{IDF curve Scattered point matrix [mm/h]  }
   }
 \author{ Corrado Tallerini }
 \note{a(tr) is defined by Gumbel distribution.  }
