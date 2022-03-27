@@ -16,7 +16,7 @@ IDFcurve(rain, g, s, tc, stvalue1 = 1, stvalue2 = fre, fre, Tr = 200,
   \item{stvalue1,stvalue2}{ Starting values of estimation algorithm. Deault stvalue1=1, stvalue2=fre }
   \item{fre}{ Series frequency [h]. For daily series fre=24, for hourly series fre=1}
   \item{Tr}{ Return period [y]. Default Tr=200}
-  \item{MP}{logical: TRUE for 3 parameters formula i=a*/(b+t)^m , FALSE for 2 parameters formula  i=at^n, Default MP=False }
+  \item{MP}{logical: TRUE for 3 parameters formula i=a/(b+t)^m , FALSE for 2 parameters formula  i=a*t^(n-1), Default MP=False }
    \item{Trplot}{logical: TRUE for plotting Tr values of a(Tr) parameter. Default Trplot=False }
      }
 \details{

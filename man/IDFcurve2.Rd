@@ -14,7 +14,7 @@ IDFcurve2(rain, tc, stvalue1 = 1, stvalue2 = 1, t, Tr = 200, MP = F, Trplot = F)
   \item{stvalue1,stvalue2}{ Starting values of estimation algorithm. Deault stvalue1=1, stvalue2=1 }
   \item{t}{observed rainfall series duration [h] example t=c(1,3,6,12,24) for durations 1,3,6,12,24 hours}
   \item{Tr}{ Return period [y]. Default Tr=200}
-   \item{MP}{logical: TRUE for 3 parameters formula i=a*/(b+t)^m , FALSE for 2 parameters formula  i=at^n, Default MP=False }
+   \item{MP}{logical: TRUE for 3 parameters formula i=a/(b+t)^m , FALSE for 2 parameters formula  i=a*t^(n-1), Default MP=False }
    \item{Trplot}{logical: TRUE for plotting Tr values of a(Tr) parameter. Default Trplot=False }
 }
 \details{
@@ -22,7 +22,7 @@ IDFcurve2(rain, tc, stvalue1 = 1, stvalue2 = 1, t, Tr = 200, MP = F, Trplot = F)
 \value{
  \item{par}{List of estimated parameters: a(Tr), m, b, h(t) [mm], i(t) [mm/h], Offset of least squares optimizer}
  \item{I}{I(t) curve scattered point matrix [mm/h]  }
-  \item{Curve }{IDF curve Scattered point matrix [mm/h] }
+  \item{Curve }{IDF curve scattered point matrix [mm/h] }
   }
 \author{ Corrado Tallerini }
 \note{a(Tr) is defined by Gumbel distribution.  }
