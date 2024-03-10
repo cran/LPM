@@ -57,6 +57,14 @@
 \alias{f5}
 \alias{vb}
 \alias{annualmax}
+\alias{Df}
+\alias{FIdrico2}
+\alias{Index1}
+\alias{MSeason}
+\alias{Pe1}
+\alias{Thornthwaite}
+\alias{contaleva2}
+\alias{PW}
 \title{Support function}
 
 \description{Support function}
