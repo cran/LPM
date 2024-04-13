@@ -1,13 +1,13 @@
 \name{PWN}
 \alias{PWN}
 
-\title{ Water requirement
+\title{ Crop Water requirement
 }
-\description{ Calculate the monthly irrigation requirement of plants based on  cumulative probability [p] and Daily watering duration of irrigation [h]
+\description{ Calculate the monthly irrigation requirement of crops based on  cumulative probability [p] and daily watering duration of irrigation [h]
 
 }
 \usage{
-PWN(x1, frvol, R, type = "Mi", p, irr)
+PWN(x1, frvol, R, p, irr)
 }
 
 \arguments{
@@ -17,8 +17,6 @@ PWN(x1, frvol, R, type = "Mi", p, irr)
 Volume fraction of the soil. It is 0.10 for sandy soil, 0.20 fpr loamy soil, 0.18 for clayey soil, 0.13 for medium-textured soil
 }
   \item{R}{Length of plant roots [cm] --- see FAO-24 Mannini reworked, maximum extraction depth
-}
-   \item{type}{ type="Ar" for clayey soil, type="Sb" for sandy soil, type="Mi" for medium-textured soil
 }
   \item{p}{ Cumulative probability of plant's water requirement [percent]
 }
@@ -41,6 +39,8 @@ Genovesi R., Bottau D. "L'importanza della falda nell' alimentazione idrica dell
 
 Regione Campania - Assessorato Agricoltura - Settore S.I.R.C.A. La tessitura del suolo (foglio divulgativo novembre - dicembre 2002)
 
+Fao irrigation and dreinage paper N. 24 - Crop water requirement, Food and agriculture organization of the united nations ROME, rivisited 1977
+
 Grimaldi, S. Tallerini, C., Serinaldi, F.,  "Modelli multivariati lineari per la generazione di serie di precipitazioni giornaliere", Giornata di Studio: Metodi Statistici e Matematici per l'Analisi delle Serie Idrologiche, Napoli, maggio 2004
 }
 \author{Corrado Tallerini
@@ -48,7 +48,7 @@ Grimaldi, S. Tallerini, C., Serinaldi, F.,  "Modelli multivariati lineari per la
 
 \examples{
 ##---- data(Pistoia)
-##---- PWN(Pistoia,0.13,40,type ="Mi",75,16)
+##---- PWN(Pistoia,0.13,40,75,16)
 ##---- Calculate the monthly irrigation requirement of a plant (Length of plant roots 40 cm in
 ##---- a medium-textured soil) based on a 75% cumulative probability and 16 hours daily irrigation
 }

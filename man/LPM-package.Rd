@@ -38,6 +38,8 @@ Hosking, J.R.M. (1980) 'The Multivariate Portmanteau Statistic' Journal of the A
 
 United States Department of Agricolture (USDA - SCS). IRRIGATION - National Engineering handbook.
 
+Fao irrigation and dreinage paper N. 24 - Crop water requirement, Food and agriculture organization of the united nations ROME, rivisited 1977
+
 Moisello U.  "Idrologia Tecnica" La Goliardica Pavese.
 
 Genovesi R., Bottau D. "L'importanza della falda nell' alimentazione idrica delle colture nella pianura emiliano-romagnola."

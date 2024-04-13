@@ -30,6 +30,7 @@ IDFcurve(rain, g, s, tc, stvalue1 = 1, stvalue2 = fre, fre, Tr = 200,
 \seealso{  \code{\link{IDFcurve2}}}
 
 \examples{
+##    data(hourly.rainfall.series)
 ##    res = IDFcurve(hourly.rainfall.series ,24, 15, 1, fre=1, Tr=200, MP=F)
 ## --> 2 parameters IDF curve estimation of a hourly rainfall series applying
 ## --> a Threshold "15 mm"  and Time of concentration t=1 h

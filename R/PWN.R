@@ -1,6 +1,6 @@
 PWN <-
-function (x1,frvol,R,type="Mi",p, irr)
-{x = PW(x1,frvol,R,type)
+function (x1,frvol,R,p, irr)
+{x = PW(x1,frvol,R)
   out <- matrix(0, nrow(x), ncol(x) + 1)
   for (i in 1:ncol(x)) out[, i] <- sort(x[, i])
   for (j in 1:nrow(x)) out[j, ncol(x) + 1] <- (100 * (2 *
